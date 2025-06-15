@@ -43,8 +43,8 @@ service_rgb = {
     'RDP': '#ff0060',
     'SIP': '#ffccff',
     'ADB': '#ffcccc',
-    'Tor': '#bf00ff',
-    'Minecraft': '#80ff00',
+    'TOR': '#bf00ff',
+    'MINECRAFT': '#80ff00',
     'OTHER': '#ffffff'
 }
 
@@ -230,9 +230,9 @@ def port_to_type(port):
         if port == 5555:
             return "ADB"
         if port == 8333 or port == 9001 or port == 9040 or port == 9050:
-            return "Tor"
+            return "TOR"
         if port == 25565:
-            return "Minecraft"
+            return "MINECRAFT"
         else:
             return str(port)
     except:
