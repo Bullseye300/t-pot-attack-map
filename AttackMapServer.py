@@ -36,6 +36,8 @@ service_rgb = {
     'RDP': '#ff0060',
     'SIP': '#ffccff',
     'ADB': '#ffcccc',
+    'Tor': '#bf00ff',
+    'Minecraft': '#80ff00',
     'OTHER': '#ffffff'
 }
 

@@ -43,6 +43,8 @@ service_rgb = {
     'RDP': '#ff0060',
     'SIP': '#ffccff',
     'ADB': '#ffcccc',
+    'Tor': '#bf00ff',
+    'Minecraft': '#80ff00',
     'OTHER': '#ffffff'
 }
 
@@ -197,36 +199,40 @@ def process_data(hit):
 def port_to_type(port):
     port = int(port)
     try:
-        if port == 21 or port == 20:
+        if port == 21 or port == 20 or port == 8021:
             return "FTP"
-        if port == 22 or port == 2222:
+        if port == 22 or port == 2222 or port == 10001:
             return "SSH"
         if port == 23 or port == 2223:
             return "TELNET"
-        if port == 25 or port == 143 or port == 110 or port == 993 or port == 995:
+        if port == 25 or port == 143 or port == 110 or port == 465 or port == 993 or port == 995:
             return "EMAIL"
-        if port == 53:
+        if port == 42 or port == 53:
             return "DNS"
-        if port == 80 or port == 81 or port == 8080 or port == 8888:
+        if port == 80 or port == 81 or port = 3128 or port == 4848 or port == 6788 or port == 7627 or port == 8000 or port == 8008 or port == 8080 or port == 8088 or port == 8888 or port == 1025 or port == 1027:
             return "HTTP"
         if port == 161:
             return "SNMP"
-        if port == 443 or port == 8443:
+        if port == 443 or port == 7443 or port == 8443:
             return "HTTPS"
         if port == 445:
             return "SMB"
-        if port == 1433 or port == 1521 or port == 3306:
+        if port == 1186 or port == 1433 or port == 1434 or port == 1521 or port == 1862 or port == 3306 or port == 5432 or port == 5984 or port == 6100 or port == 6789 or port == 27017:
             return "SQL"
         if port == 2575 or port == 11112:
             return "MEDICAL"
-        if port == 5900:
+        if port == 5800 or port == 5801 or port == 5802 or port == 5900 or port == 5901 or port == 5902 or port == 5903:
             return "VNC"
-        if port == 3389:
+        if port == 2179 or port == 3389:
             return "RDP"
         if port == 5060 or port == 5061:
             return "SIP"
         if port == 5555:
             return "ADB"
+        if port == 8333 or port == 9001 or port == 9040 or port == 9050:
+            return "Tor"
+        if port == 25565:
+            return "Minecraft"
         else:
             return str(port)
     except:
