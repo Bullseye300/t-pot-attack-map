@@ -209,7 +209,7 @@ def port_to_type(port):
             return "EMAIL"
         if port == 42 or port == 53:
             return "DNS"
-        if port == 80 or port == 81 or port = 3128 or port == 4848 or port == 6788 or port == 7627 or port == 8000 or port == 8008 or port == 8080 or port == 8088 or port == 8888 or port == 1025 or port == 1027:
+        if port == 80 or port == 81 or port == 3128 or port == 4848 or port == 6788 or port == 7627 or port == 8000 or port == 8008 or port == 8080 or port == 8088 or port == 8888 or port == 1025 or port == 1027:
             return "HTTP"
         if port == 161:
             return "SNMP"
